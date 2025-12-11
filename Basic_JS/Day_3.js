@@ -33,3 +33,11 @@
 // let total=num2.reduce((acc,val)=>acc+val,0)
 // console.log(total)
 
+let student = {
+name: "Rahul",
+age: 22,
+course: "JavaScript"
+};
+console.log(student)
+let jsonString = JSON.stringify(student);
+console.log(jsonString)
