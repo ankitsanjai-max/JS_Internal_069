@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of DOM with JS</title>
+</head>
+<body id="bd">
+    <h1 id="hid1">This is first heading.</h1>
+    <h2 id="hid2">This is second heading.</h2>
+    <button onclick="fun()">Click</button>
+    <button onkeypress="fun1()">Press</button>
+    <button id="bid1">For Caption</button>
+    <button id="bid2">For Color</button>
+    <button id="bid3">Red</button>
+    <button id="bid4">Green</button>
+    <button id="bid5">Blue</button>
+    <script>
+        document.getElementById("bid3").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="red"
+        });
+        document.getElementById("bid4").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="green"
+        });
+        document.getElementById("bid5").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="blue"
+        });
+        document.getElementById("bid1").addEventListener("click",function(){
+            document.getElementById("hid2").innerHTML="am eventlistner"
+            document.getElementById("hid1").innerHTML="am eventlistner"
+        });
+        document.getElementById("bid2").addEventListener("click",function(){
+            document.getElementById("hid2").style.color="brown"
+            document.getElementById("hid1").style.color="brown"
+        });
+        function fun(){
+            document.getElementById("hid1").innerHTML="new value"
+
+        }
+        function fun1(){
+            document.getElementById("hid1").innerHTML="Hello!!, Its me"
+            
+        }
+    </script>
+</body>
+</html>

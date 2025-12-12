@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="fm1">
+        <input id="i1" placeholder="Enter Name"><br>
+        <input id="i2" placeholder="Enter Password">
+        <button type="submit">Submit</button>
+        <p id="p1" style="color:red;"></p>
+    </form>
+    <script>
+        document.getElementById("fm1").addEventListener("submit",function(event){
+            event.preventDefault();
+            let name=document.getElementById("i1").value.trim();
+            let err=document.getElementById("p1");
+            if(name==""){
+                err.innerHTML="Value cannot be empty!!"
+            }
+            else{
+                err.style.color="green";
+                err.innerHTML="Successfull"
+            }
+            
+        });
+        
+       
+
+    </script>
+</body>
+</html>
