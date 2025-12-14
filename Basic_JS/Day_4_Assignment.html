@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body id="bd">
+
+    <span>
+        <p id="pid"></p>
+        <button id="bid">Click Me!</button>
+    </span>
+    
+    <span>
+        <button id="bid1">Red</button>
+        <button id="bid2">Green</button>
+        <button id="bid3">Blue</button>
+    </span>
+   
+    <div id="did">
+    <img id="im1" style="display: none;" src="https://4kwallpapers.com/images/wallpapers/sung-jinwoo-dragon-2880x1800-15351.jpg" height="450" width="450">
+    <img id="im2" src="https://wallpapers.com/images/hd/neon-purple-satoru-gojo-jujutsu-kaisen-phone-tfyfc2dww708tl5f.jpg" height="450" width="450">
+    <br><button id="bid4">Previous</button>
+    <button id="bid5">Next</button>
+    </div>
+
+    <div>
+        <p id="pid1">
+            Technology has become an essential part of our daily lives. It helps us communicate faster, learn new skills, and solve complex problems. From smartphones to artificial intelligence, technology continues to shape the future. However, responsible and mindful use of technology is important for a balanced life.
+        </p>
+        <button id="bid6">Magic!</button>
+    </div>
+
+    <div>
+        <span id="sid"></span><br>
+        <button id="bid7">Increase</button>
+        <button id="bid8">Decrease</button>
+    </div>
+
+    <div>
+        <div id="did1" style="border: 3px dotted black; display: none;"><p></p></div>
+        <button id="bid9">Add Box</button>
+    </div>
+
+    <script>
+        // TASK 1
+        document.getElementById("bid").addEventListener("click",function(){
+            document.getElementById("pid").innerHTML="Welcome to JavaScript!"
+        });
+
+        // TASK 2
+        document.getElementById("bid1").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="red"
+        });
+        document.getElementById("bid2").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="green"
+        });
+        document.getElementById("bid3").addEventListener("click",function(){
+            document.getElementById("bd").style.backgroundColor="blue"
+        });
+
+        //TASK 3
+        document.getElementById("bid4").addEventListener("click",function(){
+            document.getElementById("im1").style.display="none";
+            document.getElementById("im2").style.display="";
+        });
+        document.getElementById("bid5").addEventListener("click",function(){
+            document.getElementById("im1").style.display="";
+            document.getElementById("im2").style.display="none";
+        });
+
+        // TASK 4
+        let ch=1
+        document.getElementById("bid6").addEventListener("click",function(){
+            if(ch){
+                document.getElementById("pid1").style.display="none";
+                ch=0;
+            }
+            else{
+                document.getElementById("pid1").style.display="";
+                ch=1;
+            }
+        });
+
+        //TASK 5
+        let a=0;
+        document.getElementById("sid").innerText=a;
+        document.getElementById("bid7").addEventListener("click",function(){
+            a=a+1;
+            document.getElementById("sid").innerText=a;
+        });
+        document.getElementById("bid8").addEventListener("click",function(){
+            if(a>0)
+            a=a-1;
+            document.getElementById("sid").innerText=a;
+        });
+
+        //TASK 6
+        document.getElementById("bid9").addEventListener("click",function(){
+            document.getElementById("did1").style.display="";
+        });
+
+    </script>
+</body>
+</html>
