@@ -26,22 +26,27 @@
         </table>
         <p id="p1"></p>
     </form>
-    <script>/*
+    <script>
         document.getElementById("fm1").addEventListener("submit",function(event){
             event.preventDefault();
             let name=document.getElementById("i1").value.trim();
             let pas=document.getElementById("i2").value.trim();
             let err=document.getElementById("p1");
-            if(name=="" || pas==""){
+            if(name==""){
+                err.innerHTML="Value cannot be empty!!"
+                err.style.color="red";
+            }
+            else if(pas==""){
                 err.innerHTML="Value cannot be empty!!"
                 err.style.color="red";
             }
             else{
                 err.style.color="green";
                 err.innerHTML="Successfull"
+                this.submit();
             }
             
-        });*/
+        });
     </script>
    </body>
 </html>
